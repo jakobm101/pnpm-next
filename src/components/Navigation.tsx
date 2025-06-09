@@ -2,13 +2,13 @@ import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
+//   NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-  NavigationMenuViewport,
+//   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
 const navArray: { title: string; href: string }[] = [
