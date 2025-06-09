@@ -1,58 +1,11 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import CarouselImages from "@/components/CarouselImages";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Button>Button</Button>
-        <Carousel>
-          <CarouselContent>
-            <CarouselItem>
-              <AspectRatio ratio={16 / 9}>
-                <Image
-                  src="/globe.svg"
-                  alt="Image"
-                  className="rounded-md object-cover"
-                  width={200}
-                  height={200}
-                />
-              </AspectRatio>
-            </CarouselItem>
-            <CarouselItem>
-              <AspectRatio ratio={1 / 1}>
-                <Image
-                  src="/globe.svg"
-                  alt="Image"
-                  width={200}
-                  height={200}
-                  className="rounded-md object-cover"
-                />
-              </AspectRatio>
-            </CarouselItem>
-            <CarouselItem>
-              <AspectRatio ratio={16 / 9}>
-                <Image
-                  src="/globe.svg"
-                  width={200}
-                  height={200}
-                  alt="Image"
-                  className="rounded-md object-cover"
-                />
-              </AspectRatio>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+      <CarouselImages/>
         <Image
           className="dark:invert"
           src="/next.svg"
