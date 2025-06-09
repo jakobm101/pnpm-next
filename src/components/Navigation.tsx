@@ -7,25 +7,34 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
-const navArray: string[] = ["home", "create", "profile"];
+const navArray: { title: string; href: string }[] = [
+  { title: "home", href: "#" },
+  { title: "create", href: "#" },
+  { title: "profile", href: "#" },
+];
+//["home", "create", "profile"];
+
 export default function Navigation() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        {navArray.map((item: string, index: number) => (
+        {navArray.map(({ title, href }, index: number) => (
           <NavigationMenuItem key={index}>
-            <NavigationMenuLink asChild>
-              <Link href="#">{item}</Link>
+            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+              <Link href={href}>{title}</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         ))}
         <NavigationMenuItem>
           <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <NavigationMenuLink>Link</NavigationMenuLink>
+          <NavigationMenuContent >
+            <NavigationMenuLink className="w-66 text-right">Link</NavigationMenuLink>
+            <NavigationMenuLink className="w-66 text-right">Link</NavigationMenuLink>
+            <NavigationMenuLink className="w-66 text-right">Link</NavigationMenuLink>
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
