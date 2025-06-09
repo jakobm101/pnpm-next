@@ -11,7 +11,7 @@ export default function CarouselImages() {
   return (
     <Carousel>
       <CarouselContent>
-      {fooArr.map(item => <CarouselItem>{item}</CarouselItem>)}
+      {fooArr.map((item:number, index:number) => <CarouselItem key={index}>{item}</CarouselItem>)}
         <CarouselItem>...
         </CarouselItem>
       </CarouselContent>
